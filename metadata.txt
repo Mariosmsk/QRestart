@@ -8,11 +8,11 @@ qgisMinimumVersion=3.0
 description=A plugin that allows users to restart the QGIS.
 
 
-version=0.1
+version=0.2
 author=Marios S. Kyriakou, KIOS Research and Innovation Center of Excellence (KIOS CoE)
 email=mariosmsk@gmail.com
 
-about=QRestart plugin is a useful tool for QGIS users who frequently work with large and complex projects that require frequent restarting of the software. With just a few clicks, users can restart QGIS and quickly resume their work without having to navigate back to their project and reopen all the necessary files and layers.
+about=QRestart plugin is a useful tool for QGIS users who frequently work with large and complex projects that require frequent restarting of the software.
 
 tracker=https://github.com/Mariosmsk/QRestart/issues
 repository=https://github.com/Mariosmsk/QRestart
@@ -22,7 +22,9 @@ repository=https://github.com/Mariosmsk/QRestart
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-# changelog=
+changelog=2023-03-04 QRestart v0.2
+		  - Moving QRestart from Plugins to Project Menu.
+		  - Adding an Independent Toolbar.
 
 # Tags are comma separated with spaces allowed
 tags=python, restart, reload
