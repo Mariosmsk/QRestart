@@ -151,9 +151,11 @@ class QRestart:
             self.iface.addToolBarIcon(action)
 
         if add_to_menu:
-            self.iface.addPluginToMenu(
-                self.menu,
-                action)
+            self.iface.projectMenu().addAction(action)
+            #
+            # self.iface.addPluginToMenu(
+            #     self.menu,
+            #     action)
 
         self.actions.append(action)
 
@@ -165,7 +167,7 @@ class QRestart:
         icon_path = ':/plugins/qrestart/icon.png'
         self.add_action(
             icon_path,
-            text=self.tr(u'QRestart'),
+            text=self.tr(u'Restart QGIS'),
             callback=self.run,
             parent=self.iface.mainWindow())
 
@@ -176,10 +178,18 @@ class QRestart:
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
         for action in self.actions:
-            self.iface.removePluginMenu(
+            try:
+                self.iface.removePluginMenu(
                 self.tr(u'&QRestart'),
                 action)
-            self.iface.removeToolBarIcon(action)
+
+                self.iface.removeToolBarIcon(action)
+            except:
+                pass
+            try:
+                self.iface.projectMenu().removeAction(action)
+            except:
+                pass
 
     def run(self):
         """Run method that performs all the real work"""
