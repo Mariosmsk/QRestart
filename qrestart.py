@@ -67,6 +67,10 @@ class QRestart:
 
         # Check if plugin was started the first time in current QGIS session
         # Must be set in initGui() to survive plugin reloads
+        self.toolbar = self.iface.addToolBar(u'QRestart')
+        self.toolbar.setObjectName(u'QRestart')
+        self.iface.addToolBar(self.toolbar)
+
         self.first_start = None
 
     # noinspection PyMethodMayBeStatic
@@ -148,7 +152,7 @@ class QRestart:
 
         if add_to_toolbar:
             # Adds plugin icon to Plugins toolbar
-            self.iface.addToolBarIcon(action)
+            self.toolbar.addAction(action)
 
         if add_to_menu:
             self.iface.projectMenu().addAction(action)
