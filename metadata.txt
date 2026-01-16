@@ -4,7 +4,7 @@
 
 [general]
 name=QRestart
-qgisMinimumVersion=3.0
+qgisMinimumVersion=3.40
 description=A plugin that allows users to restart the QGIS.
 
 
@@ -48,4 +48,4 @@ Category of the plugin: Raster, Vector, Database or Web
 
 # If the plugin can run on QGIS Server.
 server=False
-
+supportsQt6=True
