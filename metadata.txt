@@ -22,7 +22,9 @@ repository=https://github.com/Mariosmsk/QRestart
 
 hasProcessingProvider=no
 # Uncomment the following line and add your changelog:
-changelog=2023-03-04 QRestart v0.2
+changelog=2026-01-16 QRestart v1.0
+		  - Add Qt6 support and improve QGIS restart logic.
+		  2023-03-04 QRestart v0.2
 		  - Moving QRestart from Plugins to Project Menu.
 		  - Adding an Independent Toolbar.
 
